@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:orientation="horizontal"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <TextView
+        android:id="@+id/Num"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/circular"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <com.example.myapplication.Util.Marquee
+            android:id="@+id/deviceName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:singleLine="true"
+            android:text="TextView"
+            android:textColor="@color/gray"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+<LinearLayout
+    android:gravity="right"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1.4">
+    <com.example.myapplication.Util.Marquee
+        android:layout_weight="1"
+
+        android:id="@+id/rRPerson"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="5dp"
+        android:gravity="left"
+        android:maxEms="3"
+        android:singleLine="true"
+        android:text="TextView"
+        android:textColor="@color/gray"
+        android:textSize="10dp" />
+
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:singleLine="true"
+        android:text="TextView"
+        android:textColor="@color/gray"
+        android:textSize="10dp" />
+
+</LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

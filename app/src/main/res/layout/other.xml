@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:background="@drawable/fillet03"
+        android:id="@+id/other_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="8dp"
+        android:text="TextView"
+        android:gravity="center"
+        android:focusable="true"
+        android:textColor="#42BBFF"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        />
+
+    <TextView
+        android:textSize="8dp"
+        android:textColor="#42BBFF"
+        android:gravity="center"
+        android:focusable="true"
+
+        android:background="@drawable/fillet03"
+        android:id="@+id/other_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        />
+
+    <TextView
+        android:focusable="true"
+
+        android:textSize="8dp"
+        android:textColor="#42BBFF"
+        android:gravity="center"
+        android:background="@drawable/fillet03"
+        android:id="@+id/other_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"/>
+
+    <TextView
+        android:textSize="8dp"
+        android:textColor="#42BBFF"
+        android:gravity="center"
+        android:focusable="true"
+
+        android:background="@drawable/fillet03"
+        android:id="@+id/other_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"/>
+
+    <TextView
+        android:textSize="8dp"
+        android:textColor="#42BBFF"
+        android:gravity="center"
+        android:focusable="true"
+
+        android:background="@drawable/fillet03"
+        android:id="@+id/other_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

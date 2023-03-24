@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp">
+    <TextView
+        android:gravity="center"
+        android:textSize="10dp"
+        android:textColor="@color/gray"
+        android:id="@+id/textview2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="TextView"
+        android:layout_marginRight="5dp"
+        />
+    <com.example.myapplication.Util.Marquee
+        android:textColor="@color/gray"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="TextView"
+        android:textSize="10dp"
+
+         />
+</LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:progressDrawable="@drawable/progress_circle"
+        tools:ignore="SmallSp" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

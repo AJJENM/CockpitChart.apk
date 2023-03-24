@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 进度条背景色 -->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="2.5dp" />
+            <solid android:color="#2E3743" />
+            <size android:height="1dp" />
+        </shape>
+    </item>
+
+    <!-- 第二进度条 -->
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <corners android:radius="2.5dp" />
+                <gradient
+                    android:angle="270"
+                    android:centerColor="#c6b7ff"
+                    android:centerY="0.75"
+                    android:endColor="#c3b2ff"
+                    android:startColor="#b9a4ff" />
+                <size android:height="1dp" />
+            </shape>
+        </clip>
+    </item>
+
+    <!-- 第一进度条 -->
+    <item android:id="@android:id/progress">
+        <scale android:scaleWidth="100%"
+            android:drawable="@drawable/progress_bar_medal"   />
+    </item>
+</layer-list>

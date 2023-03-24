@@ -1,0 +1,101 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    // 自定义打包名称
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "CockpitChart.apk"
+        }
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('F:\\APK\\CockpitChart.jks')
+            storePassword '1a2b3c4d5e'
+            keyAlias 'CockpitChart'
+            keyPassword '1a2b3c4d5e'
+
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        release {
+            storeFile file('F:\\APK\\CockpitChart.jks')
+            storePassword '1a2b3c4d5e'
+            keyAlias 'CockpitChart'
+            keyPassword '1a2b3c4d5e'
+
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            assets {
+                srcDirs 'src\\main\\assets'
+            }
+        }
+    }
+    namespace 'com.example.myapplication'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.myapplication"
+        minSdk 28
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+        buildFeatures{
+            dataBinding true
+        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+
+dependencies {
+
+    //引入AndroidX吧,替换掉support包
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    def lifecycle_version = "2.0.0"
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+
+    //Echarts
+    implementation 'com.github.xiaohu409:HtEChart:1.0'
+    implementation 'com.github.abel533:ECharts:3.0.0.2'
+    //mpandroidchart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    implementation'com.google.code.gson:gson:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+    testImplementation 'junit:junit:'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+}

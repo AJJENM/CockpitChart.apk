@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#13141A"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:paddingBottom="5dp">
+
+        <include layout="@layout/title"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/title"
+            >
+
+        </include>
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="11"
+            android:orientation="vertical"
+            android:paddingRight="5dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:transitionName="科室报修情况"
+                android:background="#121B28"
+                android:orientation="vertical"
+                >
+                <TextView
+
+                    android:textColor="#FFFFFF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:textSize="10dp"
+                    android:text=" 科室报修情况\n Dept repair situation "
+                    >
+                </TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:transitionName="历史报修量"
+                android:background="#121B28"
+                >
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp"
+                    android:text=" 历史报修量\n Repair history"
+                    android:textColor="@color/white" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/RepairHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingRight="5dp"
+            android:background="#13141A">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:orientation="vertical"
+                android:paddingRight="5dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:transitionName="大型and特殊设备监控"
+                    android:background="#121B28"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="10dp"
+                        android:textColor="@color/white"
+                        android:text=" 大型&amp;特殊设备监控\n Large&amp;dpecial equipment monitoring" />
+
+                    <include layout="@layout/special">
+
+                    </include>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:transitionName="备件使用情况"
+                    android:background="#121B28"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    >
+
+                    <TextView
+
+                        android:id="@+id/textView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=" 备件使用情况\n Use of dpare parts"
+                        android:textColor="@color/white"
+                        android:textSize="10dp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview_parts"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:transitionName="设备维保情况"
+                android:paddingRight="5dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:transitionName="进行中的维修记录"
+                    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="2"
+    android:background="#121B28"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        android:text=" 设备维保情况\n Equipment maintenance" />
+
+    <include layout="@layout/equipmentmaintenance">
+
+    </include>
+</LinearLayout>
+<LinearLayout
+    android:id="@+id/one"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="3"
+    android:background="#121B28"
+    android:layout_marginLeft="5dp"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:textColor="@color/white"
+        android:text=" 设备科室数量分布图\n Equipment ownership tree map" />
+
+    <com.example.myapplication.Util.HtEChartView
+        android:id="@+id/HtChartView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+
+</LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:transitionName="维修响应速度"
+                    android:background="#121B28"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        android:text=" 维修响应速度&amp;工时分析\n Maintenance analysis" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/line_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                    </com.github.mikephil.charting.charts.LineChart>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_weight="0.001"
+                android:layout_height="match_parent"
+                android:transitionName="其他信息"
+                android:background="#121B28"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="8dp"
+                    android:text="其他信息" />
+                <include layout="@layout/other"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    >
+
+
+                </include>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

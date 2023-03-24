@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fillet04"
+    >
+
+    <TextView
+        android:gravity="center_vertical"
+        android:id="@+id/mouth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:layout_margin="2dp"
+        />
+    <TextView
+        android:id="@+id/analyse_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/___5_"
+
+         />
+
+    <TextView
+        android:id="@+id/analyse_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/___5_"
+        android:drawableTint="#1C2A71"
+         />
+</androidx.appcompat.widget.LinearLayoutCompat>
